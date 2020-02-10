@@ -15,20 +15,8 @@ class Prueba extends Component {
         });
     }
 
-   alertItemName = (item) => {
-   const {partidos}=this.props;
-
-   if (partidos[item.id].estado){
-        partidos[item.id].estado = false;
-   }else {
-   partidos[item.id].estado = true;
-   }
-   this.setState({
-        });
-   };
-
     render(){
-    const {partidos}=this.props;
+    const {partidos,alertItemName}=this.props;
 
   /*  console.log(partidos)*/
         return(
@@ -38,7 +26,7 @@ class Prueba extends Component {
 
                   <TouchableOpacity
                      key = {item.id}
-                     onPress = {() => this.alertItemName(item)}>
+                     onPress = {() => alertItemName(item)}>
 
                      <View style = {styles.container}>
                         <View>

@@ -121,13 +121,18 @@ filtro(){
 
 
 alertItemName = (item) => {
-    const {partidos}=this.props;
-    if (partidos[item.id].estado){
-        partidos[item.id].estado = false;
-    }else {
-        partidos[item.id].estado = true;
-    }
+    const {partidos}= this.state;
+    const validar = [...partidos];
+    const estado = !item.estado;
+    validar.map(item2 => (item2.id === item.id) && (item2.estado = estado));
+
+//    if (partidos[+item].estado){
+//        partidos[+item].estado = false;
+//    }else {
+//        partidos[+item].estado = true;
+//    }
     this.setState({
+    partidos: validar
     /* pasar estado */
     });
 };
@@ -148,7 +153,7 @@ const {partidos}=this.state;
 
                <Prueba style={styles.prueba}
                partidos={this.filtro()}
-               alertItemName={this.alertItemName} />
+               alertItemName={this.alertItemName}/>
 
           </ScrollView>
           <Footer cambiarFavoritos={this.cambiarFavoritos}/>
