@@ -35,6 +35,9 @@ export default class App extends React.Component {
               visitante: 'Real Madrid',
               favorito: 'V',
               estado: true,
+              Fundado: 'Fundado el 18 de marzo de 1919'
+              Entrenador: 'Entrenador: Albert Celades',
+              Presidente: 'Presidente: Anil Murthy',
             },
             {
               id: '1',
@@ -42,6 +45,9 @@ export default class App extends React.Component {
               visitante: 'Leganes',
               favorito: 'V',
               estado: true,
+              Fundado: 'Fundado en 1909'
+              Entrenador: 'Entrenador: Paco López',
+              Presidente: 'Presidente: Francisco Catalán',
             },
             {
               id: '2',
@@ -49,6 +55,9 @@ export default class App extends React.Component {
               visitante: 'Numancia',
               favorito: 'X',
               estado: false,
+              Fundado: 'Fundado en 1916'
+              Entrenador: 'Entrenador: Vicente Moreno Peris',
+              Presidente: 'Director ejecutivo: Maheta Molango',
             },
             {
               id: '3',
@@ -56,6 +65,9 @@ export default class App extends React.Component {
               visitante: 'Atletic',
               favorito: 'X',
               estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
             },
             {
                id: '4',
@@ -63,6 +75,9 @@ export default class App extends React.Component {
                visitante: 'Murcia',
                favorito: 'X',
                estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
              },
              {
                  id: '5',
@@ -70,6 +85,9 @@ export default class App extends React.Component {
                  visitante: 'Aragones',
                  favorito: 'X',
                  estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
                },
             {
                 id: '6',
@@ -77,6 +95,9 @@ export default class App extends React.Component {
                 visitante: 'Valencia',
                 favorito: 'X',
                 estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
               },
            {
                id: '7',
@@ -84,6 +105,9 @@ export default class App extends React.Component {
                visitante: 'Madrid',
                favorito: 'X',
                estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
              },
              {
                  id: '8',
@@ -91,6 +115,9 @@ export default class App extends React.Component {
                  visitante: 'Castellón',
                  favorito: 'X',
                  estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
                },
            {
                id: '9',
@@ -98,12 +125,16 @@ export default class App extends React.Component {
                visitante: 'Murcia',
                favorito: 'X',
                estado: false,
+              Fundado: ''
+              Entrenador: '',
+              Presidente: '',
            }
           ]};
 
 // para utilizar funcion como this
 cambiarFavoritos = this.cambiarFavoritos.bind(this);
 filtro = this.filtro.bind(this);
+
 
 
 cambiarFavoritos(){
@@ -137,10 +168,9 @@ alertItemName = (item) => {
     });
 };
 
-viewDetails(id){
+viewDetails = (id) => {
     const {navigate} = this.props.navigation;
-    const [element] = this.state.data.filter(el => el.id === id);
-
+    const [element] = this.state.partidos.filter(el => el.id === id);
     navigate('Details', { element })
   }
 
@@ -160,7 +190,8 @@ const {partidos}=this.state;
 
                <Prueba style={styles.prueba}
                partidos={this.filtro()}
-               alertItemName={this.alertItemName}/>
+               alertItemName={this.alertItemName}
+               viewDetails={this.viewDetails}/>
 
           </ScrollView>
           <Footer cambiarFavoritos={this.cambiarFavoritos}/>

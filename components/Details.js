@@ -11,12 +11,12 @@ import {
 export default class Details extends Component {
   render() {
     const { navigation } = this.props;
-    console.log(navigation.getParam('element'))
+    const elemento = navigation.getParam('element')
 
     return (
       <View>
-        <Text>Hello</Text>
-        <Text>Hello 2</Text>
+        <Text>{elemento.visitante}</Text>
+        <Text>Hello 4</Text>
       </View>
     )
   }

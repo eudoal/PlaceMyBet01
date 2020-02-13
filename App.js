@@ -40,8 +40,8 @@ const UserNavigator = createStackNavigator(
 
 const Tabs = createBottomTabNavigator(
   {
-    List: ListNavigator,
-    User: UserNavigator
+    Lista: ListNavigator,
+    Usuarios: UserNavigator
   },
   {
     tabBarOptions: {

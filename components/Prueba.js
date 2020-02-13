@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, View, FlatList, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {SafeAreaView, View, FlatList, StyleSheet, Text, TouchableOpacity, Button} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faStar as fasFaStar } from '@fortawesome/free-solid-svg-icons'
@@ -16,14 +16,15 @@ class Prueba extends Component {
     }
 
     render(){
-    const {partidos,alertItemName}=this.props;
+    const {partidos,alertItemName,viewDetails}=this.props;
+
 
   /*  console.log(partidos)*/
         return(
          <View>
             {
               partidos && partidos.map((item, index) => (
-
+                  <>
                   <TouchableOpacity
                      key = {item.id}
                      onPress = {() => alertItemName(item)}>
@@ -40,10 +41,13 @@ class Prueba extends Component {
                             </Text>
                             </View>
                             <Text style = {styles.apuestas}>Dinero apostado: {item.apuestas}</Text>
+
                         </View>
                      </View>
 
                   </TouchableOpacity>
+                  <Button onPress={() => viewDetails(item.id)} title="Detalles"/>
+                  </>
 
                ))
             }
