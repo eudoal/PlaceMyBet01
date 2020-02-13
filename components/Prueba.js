@@ -46,7 +46,9 @@ class Prueba extends Component {
                      </View>
 
                   </TouchableOpacity>
-                  <Button onPress={() => viewDetails(item.id)} title="Detalles"/>
+                  <View style={styles.button}>
+                  <Button color="#666666" onPress={() => viewDetails(item.id)} title="Detalles equipo Local"/>
+                  </View>
                   </>
 
                ))
@@ -77,17 +79,10 @@ const styles = StyleSheet.create ({
       color: '#4f603c'
    },
   starCont: {
-
-
         paddingHorizontal: 5,
       flexDirection: 'row',
-
-
-
   },
   equipos: {
-
-
     fontWeight: 'bold',
       justifyContent: 'flex-start',
     fontSize: 20,
@@ -100,11 +95,15 @@ const styles = StyleSheet.create ({
         color: "red",
     },
   apuestas: {
-
      flexDirection: 'column',
-
       marginTop: 5,
         paddingHorizontal: 16,
       fontSize: 15,
-  }
+  },
+button: {
+    borderWidth: 0,
+    height: 40,
+    justifyContent: 'center',
+    alignSelf: 'center',
+},
 })

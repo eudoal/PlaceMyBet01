@@ -15,8 +15,10 @@ export default class Details extends Component {
 
     return (
       <View>
-        <Text>{elemento.visitante}</Text>
-        <Text>Hello 4</Text>
+        <Text>{elemento.local}</Text>
+        <Text>{elemento.Fundado}</Text>
+        <Text>{elemento.Entrenador}</Text>
+        <Text>{elemento.Presidente}</Text>
       </View>
     )
   }
