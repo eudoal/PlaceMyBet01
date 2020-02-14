@@ -4,6 +4,7 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  Image,
   Text,
   StatusBar,
 } from 'react-native';
@@ -15,18 +16,39 @@ export default class User extends Component {
 
   state = {
     userInfo: {
-      name: 'Pablo',
+      nombre: 'Eugenio',
+      apellidos: 'Domenech',
+      email: 'eugeniodomenech@gmail.com',
     },
   };
 
   render () {
-    const { userInfo: { name } } = this.state;
+    const { userInfo: { nombre, apellidos, email } } = this.state;
 
     return (
-      <View>
-        <Text>{name}</Text>
-        <Text>Hello 2</Text>
+      <View style = {styles.container}>
+
+              <Image
+              style={{width: 70, height: 70}}
+              source={require('./Valencia.png')} />
+      <Text>Nombre:</Text>
+        <Text style = {styles.texto}>{nombre} {apellidos}</Text>
+        <Text>Email:</Text>
+        <Text style = {styles.texto}>{email}</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+   container: {
+      alignItems: 'center',
+      marginTop: 100,
+      padding: 20
+   },
+     texto: {
+        color: 'green',
+        fontSize: 20,
+        fontWeight: 'bold',
+     },
+});

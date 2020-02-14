@@ -38,6 +38,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado el 18 de marzo de 1919',
               Entrenador: 'Entrenador: Albert Celades',
               Presidente: 'Presidente: Anil Murthy',
+              escudo: require('../imagenes/Valencia.png'),
             },
             {
               id: '1',
@@ -48,26 +49,29 @@ export default class App extends React.Component {
               Fundado: 'Fundado en 1909',
               Entrenador: 'Entrenador: Paco López',
               Presidente: 'Presidente: Francisco Catalán',
+              escudo: require('../imagenes/Levante.png'),
             },
             {
               id: '2',
-              local: 'Mayorca',
+              local: 'Mallorca',
               visitante: 'Numancia',
               favorito: 'X',
               estado: false,
               Fundado: 'Fundado en 1916',
               Entrenador: 'Entrenador: Vicente Moreno Peris',
               Presidente: 'Director ejecutivo: Maheta Molango',
+              escudo: require('../imagenes/Mallorca.png'),
             },
             {
               id: '3',
               local: 'Elche',
-              visitante: 'Atletic',
+              visitante: 'Athletic',
               favorito: 'X',
               estado: false,
               Fundado: 'Fundado el 28 de agosto de 1922',
               Entrenador: 'Entrenador: José Rojo Martín',
               Presidente: 'Presidente: Joaquín Buitrago Marhuenda',
+              escudo: require('../imagenes/Elche.png'),
             },
             {
                id: '4',
@@ -78,6 +82,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado el 20 de julio de 1922',
               Entrenador: 'Entrenador: Óscar Cano Moreno',
               Presidente: 'Administrador: Óscar Cano Moreno',
+              escudo: require('../imagenes/Castellon.png'),
              },
              {
                  id: '5',
@@ -88,6 +93,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado el 25 de enero de 1890',
               Entrenador: 'Entrenador: Julen Lopetegui',
               Presidente: 'Presidente: José Castro Carmona',
+              escudo: require('../imagenes/Sevilla.png'),
                },
             {
                 id: '6',
@@ -98,6 +104,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado en 1909',
               Entrenador: 'Entrenador: Paco López',
               Presidente: 'Presidente: Francisco Catalán',
+              escudo: require('../imagenes/Levante.png'),
               },
            {
                id: '7',
@@ -108,6 +115,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado el 9 de abril de 1945',
               Entrenador: 'Entrenador: Aritz López Garai',
               Presidente: 'Presidente: Moisés Israel Garzón',
+              escudo: require('../imagenes/Numancia.png'),
              },
              {
                  id: '8',
@@ -118,6 +126,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado el 18 de marzo de 1919',
               Entrenador: 'Entrenador: Albert Celades',
               Presidente: 'Presidente: Anil Murthy',
+              escudo: require('../imagenes/Valencia.png'),
                },
            {
                id: '9',
@@ -128,6 +137,7 @@ export default class App extends React.Component {
               Fundado: 'Fundado en 1898',
               Entrenador: 'Entrenador: Gaizka Garitano',
               Presidente: 'Presidente: Aitor Elizegi',
+              escudo: require('../imagenes/athletic.png'),
            }
           ]};
 
