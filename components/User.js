@@ -30,7 +30,7 @@ export default class User extends Component {
 
               <Image
               style={{width: 70, height: 70}}
-              source={require('./Valencia.png')} />
+              source={require('../imagenes/usuario.jpg')} />
       <Text>Nombre:</Text>
         <Text style = {styles.texto}>{nombre} {apellidos}</Text>
         <Text>Email:</Text>
