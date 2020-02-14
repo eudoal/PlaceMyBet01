@@ -1,5 +1,4 @@
 import React from 'react';
-import Lista from './Lista';
 import Prueba from './Prueba';
 import Footer from './Footer';
 import Heading from './Heading';
